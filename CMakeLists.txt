@@ -28,7 +28,7 @@ if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_BINARY_DIR})
 endif()
 
 project(Computer-Graphics
-        VERSION 0.1.0-beta
+        VERSION 0.1.0
         DESCRIPTION "A collection of practicals for CS 325 - Computer Graphics Lab"
         HOMEPAGE_URL https://github.com/EmperorYP7/Computer-Graphics
         LANGUAGES CXX C
