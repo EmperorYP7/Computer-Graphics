@@ -11,7 +11,7 @@ jobs:
         id: checkout
         uses: actions/checkout@v2
       - name: Install XOrgDev
-        id: install xorg-dev
+        id: install XOrgDev
         run: |
           sudo apt-get install -y xorg-dev
       - name: Configuring CMake files
