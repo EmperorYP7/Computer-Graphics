@@ -1,5 +1,4 @@
-
-#  Copyright 2021 The casbin Authors. All Rights Reserved.
+#  Copyright 2021 Yash Pandey. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -20,9 +19,10 @@ FetchContent_Declare(
         URL https://github.com/glfw/glfw/archive/refs/tags/3.3.4.zip
 )
 
-set(BUILD_SHARED_LIBS ON)
-set(GLFW_BUILD_EXAMPLES OFF)
-set(GLFW_BUILD_TESTS OFF)
-set(GLFW_BUILD_DOCS OFF)
-set(GLFW_VULKAN_STATIC OFF)
+set(BUILD_SHARED_LIBS ON) # In case we want to link against dynamic library
+set(GLFW_BUILD_EXAMPLES OFF) # Not needed
+set(GLFW_BUILD_TESTS OFF) # Not needed
+set(GLFW_BUILD_DOCS OFF) # Not needed. Available at https://www.glfw.org/documentation.html
+set(GLFW_VULKAN_STATIC OFF) # Not needed. We'll be working with OpenGL only ;)
+
 FetchContent_MakeAvailable(glfw)

@@ -1,3 +1,17 @@
+#  Copyright 2021 Yash Pandey. All Rights Reserved.
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+
 cmake_minimum_required(VERSION 3.20)
 
 set(CMAKE_MODULE_PATH
@@ -5,7 +19,20 @@ set(CMAKE_MODULE_PATH
         ${CMAKE_SOURCE_DIR}/cmake/modules
         )
 
-project(Computer-Graphics)
+###############################################################################
+# Forbid in-source build.
+
+if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_BINARY_DIR})
+    message(FATAL_ERROR
+            "In-source build not allowed. Please make a new sub-directory and run CMake from there.")
+endif()
+
+project(Computer-Graphics
+        VERSION 0.1.0-beta
+        DESCRIPTION "A collection of practicals for CS 325 - Computer Graphics Lab"
+        HOMEPAGE_URL https://github.com/EmperorYP7/Computer-Graphics
+        LANGUAGES CXX C
+        )
 
 set(CMAKE_CXX_STANDARD 17)
 
