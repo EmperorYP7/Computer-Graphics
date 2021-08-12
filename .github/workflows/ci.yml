@@ -10,6 +10,10 @@ jobs:
       - name: Checkout
         id: checkout
         uses: actions/checkout@v2
+      - name: Install xorg-dev
+        id: install xorg-dev
+        run: |
+          sudo apt-get install -y xorg-dev
       - name: Configuring CMake files
         id: building-files
         run: |
